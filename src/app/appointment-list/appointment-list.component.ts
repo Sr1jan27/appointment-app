@@ -13,5 +13,26 @@ export class AppointmentListComponent {
     title: "Take the Dog for a walk",
     date: new Date('2024-05-15')
   };
+  newAppointmentTitle: string = "";
+  newAppointmentDate: Date = new Date();
+  appointments: Appointment[] = [];
+
+  addApointment(){
+
+    if(this.newAppointmentTitle.trim().length && this.newAppointmentDate){
+      let newAppointment: Appointment = {
+        id: Date.now(),
+        title: this.newAppointmentTitle,
+        date: this.newAppointmentDate
+      };
+      this.appointments.push(newAppointment);
+      this.newAppointmentTitle = "";
+      this.newAppointmentDate = new Date();
+    }
+  }
+
+  remove(index: number){
+    this.appointments.splice(index,1);
+  }
 
 }
