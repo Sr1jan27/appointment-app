@@ -28,11 +28,15 @@ export class AppointmentListComponent {
       this.appointments.push(newAppointment);
       this.newAppointmentTitle = "";
       this.newAppointmentDate = new Date();
+      // we can save upto 5mb data between sessions in local storage of the browser 
+      localStorage.setItem("appointments", JSON.stringify(this.appointments));
     }
   }
 
   remove(index: number){
     this.appointments.splice(index,1);
+    // save the data in local storage 
+    localStorage.setItem("appointments", JSON.stringify(this.appointments));
   }
 
 }
