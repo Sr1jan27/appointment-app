@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
 
     <div class="card mt-3">
         <div class="row">
@@ -8,13 +8,13 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <input class="form-control" [(ngModel)]  = "newAppointmentTitle" placeholder="Appointment Discription">
+                <input class="form-control my-2 mx-2" [(ngModel)]  = "newAppointmentTitle" placeholder="Appointment Discription">
             </div>
             <div class="col-md-6">
-                <input class="form-control" [(ngModel)] = "newAppointmentDate" type="date" placeholder="Appointment Date">
+                <input class="form-control my-2" [(ngModel)] = "newAppointmentDate" type="date" placeholder="Appointment Date">
             </div>
-            <div class="col-md-6">
-                <button class="btn btn-primary w-100" (click)="addApointment()">Add</button>
+            <div class="align-items-center col-md-6">
+                <button class="btn btn-primary w-100 my-2 mx-2" (click)="addApointment()">Add</button>
             </div>
         </div>
     </div>
